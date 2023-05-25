@@ -1,0 +1,53 @@
+<div class="container">
+      <div class="row">
+        <div class="col-md-3">
+            <div class="image-gallery">
+              <img id="mainImage"class="img-fluid" 
+          src="./images/img_1.jpg"/>
+          <div id="divId" onclick="changeImageOnClick(event)" class="thumbnail-box">
+            <img class="imgStyle" src="./images/i20sportz-ivt.jpg" />
+            <img class="imgStyle" src="./images/Nissan-Patrol-UAE-July-2020.jpg" />
+            <img class="imgStyle" src="./images/service3.jpg" />
+            <img class="imgStyle" src="./images/service3.jpg" />
+          </div>
+          <ul class="car-details">
+            <li><p>Deposit</p><strong>AED 2000</strong></li>
+            <li><p>Seats</p><strong>5</strong></li>
+            <li><p>Min Booking</p><strong>5</strong></li>
+            <a href="#" class="btn btn-danger">Enquire Now</a>
+          </ul>
+            </div>
+        </div>
+        <div class="col-md-3">
+          
+      </div>
+      <div class="col-md-3">
+        
+    </div>
+    <div class="col-md-3">
+      
+  </div>
+      </div>
+    </div>
+
+    var images = document.getElementsByTagName("img");
+
+for (var i = 0; i < images.length; i++) {
+  images[i].onmouseover = function() {
+    this.style.cursor = "hand";
+    this.style.borderColor = "red";
+  };
+  images[i].onmouseout = function() {
+    this.style.cursor = "pointer";
+    this.style.borderColor = "grey";
+  };
+}
+
+function changeImageOnClick(event) {
+  // debugger;
+  var targetElement = event.srcElement;
+  // debugger;
+  if (targetElement.tagName === "IMG") {
+    mainImage.src = targetElement.getAttribute("src");
+  }
+}

@@ -2,7 +2,7 @@ html {
   overflow-x: hidden; }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
   line-height: 1.8;
   font-size: 16px;
   background: #fff;
@@ -23,7 +23,21 @@ h1, h2, h3, h4, h5,
   line-height: 1.45;
   font-weight: normal;
   color: #000; }
-
+  .imgStyle {
+    width: 3rem;
+    height: 3rem;
+    border: 3px solid grey;
+  }
+.thumbnail-box {
+  text-align: center;
+}
+.image-gallery {
+  text-align: center;
+}
+.btn-v {
+  display: block;
+  margin: 0 auto;
+}
 .text-primary {
   color: #ff0000 !important; }
 
@@ -210,6 +224,10 @@ h1, h2, h3, h4, h5,
 .car-title {
   text-transform: uppercase;
 }
+.big-img {
+  box-shadow: 0 1rem 2rem #929292;
+  height: 15rem;
+}
 .car-description{
   font-size: 1rem;
   line-height: 1.5;
@@ -222,7 +240,7 @@ h1, h2, h3, h4, h5,
   margin-top: 1rem;
 }
 .car-details {
-  text-align: left;
+  text-align: center;
   padding: 0;
 }
 .car-details li {
@@ -232,6 +250,8 @@ h1, h2, h3, h4, h5,
 }
 .car-details p {
   margin-bottom: 0;
+  font-size: 1.3rem;
+  color: #000;
 }
 .car-image img {
   transition: transform .4s ease-in;
@@ -301,6 +321,7 @@ h1, h2, h3, h4, h5,
 }
 .btn {
   border-radius: 4px;
+  width: 11rem;
   padding: 20px 30px;
   font-size: 14px;
   letter-spacing: .1em;
@@ -614,6 +635,16 @@ textarea {
   -webkit-animation: loader-dash 1.5s ease-in-out infinite;
   animation: loader-dash 1.5s ease-in-out infinite;
   stroke-linecap: round; }
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width:767px) {
+  .margin-mobile {
+    margin-bottom: 2rem;
+  }
+  .row-margin {
+    padding: 0 !important;
+  }
+}
 
 @-webkit-keyframes loader-rotate {
   100% {
